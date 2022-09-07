@@ -20,4 +20,8 @@ x={
 console.table(x);
 console.log(typeof(x));
 
+console.log(1/0);
+console.log("abc"/2);
 
+const bigintNo = 98457485793475983459n;
+console.log(typeof(bigintNo));

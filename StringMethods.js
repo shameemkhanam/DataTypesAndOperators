@@ -49,11 +49,14 @@ var str4 = "Hello World ";
 
 // console.log(str4.substring(2,7));
 
-var a = 45;
-var b = a.toString()
-console.log(typeof(a));
-console.log(typeof(b));
+// var a = 45;
+// var b = a.toString()
+// console.log(typeof(a));
+// console.log(typeof(b));
 
-console.log(b.valueOf());
+// console.log(b.valueOf());
+
+let str = "abc def";
+console.log(str.slice(0,str.length-1));
 
 

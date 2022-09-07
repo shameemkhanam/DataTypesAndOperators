@@ -38,7 +38,7 @@ console.table(arr3); */
 //ARRAY METHODS
 //========================================
 
-var a = ["sallu","abbu","neetu","meetu"];
+var a = ["sallu","abbu","neetu","meetu","neetu"];
 // console.log(a.sort());
 //----------------------------------------------
 // var a = [20,43,12,34];
@@ -60,10 +60,83 @@ var a = ["sallu","abbu","neetu","meetu"];
 let ar1 = ["a","b","c"] ;
 let ar2 = ["d","e"];
 let ar3 = ["f","g"];
-// console.log(ar1.concat(ar2,ar3));
+// // console.log(ar1.concat(ar2,ar3));
 
-// console.log(ar1.join(" "));
-console.log(ar1.join("/"));
+// // console.log(ar1.join(" "));
+// console.log(ar1.join("/"));
+
+// console.log(ar1.slice(1,2));
+// console.log(ar1.slice(-2));
+// console.log(a.slice(-3,-1));
+
+// ar1.splice(1,0,"n1","n2","n3");
+// ar2.splice(1,1,"n3","n4");
+// ar3.splice(-1,1,"n5");
+// console.log(ar1);
+// console.log(ar2);
+// ar3.splice(1,1);
+// console.log(ar3);
+
+// a=12;
+// let b=Array.isArray(a);
+// console.log(b);
+
+// let b = a.indexOf("neetu");
+// let b = a.indexOf("neetu",3);
+// let b = a.indexOf("neetuiu");
+
+// b = a.lastIndexOf("neetu",3);
+// console.log(b);
+
+// b = a.includes("meetu");
+// b = a.includes("meetu34");
+// console.log(b);
+
+// a = [3,12,14,18,19,20];
+// b = a.some(checkAdult);
+// console.log(b);
+// function checkAdult(age){
+//   return age >= 18;
+// }
+
+// a = [13,18,19,20];
+// a = [18,19];
+// b = a.every(checkAdult);
+// console.log(b);
+// function checkAdult(age){
+//   return age >= 18;
+// }
+
+let a1 = [12,14,20,18];
+// let b1 = a1.find(check);
+// console.log(b1);
+// function check(age){
+//   return age >=18;
+// }
+
+
+// b1 = a1.findIndex(check);
+// console.log(b1);
+// function check(age){
+//   return age >=18;
+// }
+
+// let b1 = a1.filter(checkAge);
+// console.log(b1);
+// function checkAge(age){
+//   return age >=18;
+// }
+
+let arrr = ["hh","kk","ll","oo"];
+
+// console.log(arrr.valueOf());
+
+// arrr.fill("h");
+// arrr.fill("h",1);
+arrr.fill("h",1,3);
+console.log(arrr);
+
+
 
 
 
