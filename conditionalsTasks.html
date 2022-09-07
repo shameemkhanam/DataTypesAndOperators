@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditionals</title>
+  </head>
+  <body>
+    <!-- TASK 1 -->
+
+    <!-- <script>
+    let value = prompt("What is the “official” name of JavaScript?");
+    if (value == "ECMAScript"){
+      document.write("U are Right");
+    }
+    else {
+      document.write("You don’t know? ECMAScript!");
+    }
+  </script> -->
+
+    <!-- TASK 2 -->
+
+    <!-- <script>
+    let value = prompt("Enter a number...");
+    if(value >0){
+      alert(1);
+    }
+    else if(value<0){
+      alert(-1);
+    }
+    else if(value==0){
+      alert(0);
+    }
+  </script> -->
+
+    <!-- TASK 3 -->
+
+    <!-- Rewrite this if using the conditional operator '?':
+
+let result;
+
+if (a + b < 4) {
+  result = 'Below';
+} else {
+  result = 'Over';
+} -->
+
+    <!-- <script>
+  let result;
+  a = 1, b=22;
+  result = (a+b<4) ? "Below" : "Over";
+  alert(result);
+</script> -->
+
+    <!-- TASK 4 -->
+    <!-- Rewrite if..else using multiple ternary operators '?'. -->
+    <!-- let message;
+
+if (login == 'Employee') {
+  message = 'Hello';
+} else if (login == 'Director') {
+  message = 'Greetings';
+} else if (login == '') {
+  message = 'No login';
+} else {
+  message = '';
+} -->
+    <!-- <script>
+      let message;
+      login = "Director"
+      message = (login == 'Employee') ? "Hello" : 
+      (login == 'Director') ? "Greetings" : 
+      (login == '') ? "No login" : " ";
+      alert(message);
+      </script> -->
+
+    <script>
+      let a = +prompt("First number?", 1);
+      let b = +prompt("Second number?", 2);
+
+      alert(a + b);
+    </script>
+  </body>
+</html>
