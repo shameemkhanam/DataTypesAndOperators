@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body style="margin: 50px; font-weight: bold; font-size: 20px">
+ <!-- TASK 1 : Add JavaScript to the button to make <div id="text"> disappear when we click it.
+  <div id="text">the text to disappear</div>
+  <br>
+  <button id="btn">Click to hide the text</button>
+
+  <script>
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click",function(){
+      document.getElementById("text").style.display = "none";
+      // document.getElementById('text').hidden = true;
+    });
+  </script> -->
+
+  <!-- TASK 2 : Create a button that hides itself on click. -->
+  <button id="btn">This button will hide</button>
+  <input type="button" onclick="this.hidden=true" value="Click to hide">
+  <script>
+    document.getElementById("btn").addEventListener("click",function(){
+      document.getElementById("btn").style.display="none";
+    })
+    
+
+  </script>
+</body>
+</html>

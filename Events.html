@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body style="margin: 50px; font-weight: bold; font-size: 20px">
+  <button id="button1" onclick="alert('button1 clicked.');">Button 1 </button>
+
+  <button id="button2">Button 2</button>
+
+  <button id="button3" onclick="alert(this.innerHTML);">Button 3 </button>
+  <br>
+  <input type="text" id="input1">
+  <br>
+  <button onmousemove="alert(event.type);">Button 4</button>
+  <br>
+  <button id="button5">Button 5</button>
+  <br>
+  <button id="button6">Button 6</button>
+
+
+  <script>
+    button2.onclick = function(){
+      alert("button2  clicked.");
+    }
+    function handler1(){
+      alert("thanks!");
+    }
+    function handler2(){
+      alert("thanks again!");
+    }
+    input1.addEventListener("click", handler1);
+    input1.addEventListener("click", handler2);
+
+    // document.addEventListener("DOMContentLoaded",function(){
+    //   alert("dom built");
+    // });
+    // let obj = {
+    //   handleEvent(event){
+    //     alert(event.type + " at " + event.currentTarget);
+    //   }
+    // };
+    // button5.addEventListener("dblclick",obj);
+
+    class Menu {
+    handleEvent(event) {
+      switch(event.type) {
+        case 'mousedown':
+          button6.innerHTML = "Mouse button pressed";
+          break;
+        case 'mouseup':
+          button6.innerHTML += "...and released.";
+          break;
+      }
+    }
+  }
+
+  let menu = new Menu();
+  button6.addEventListener('mousedown', menu);
+  button6.addEventListener('mouseup', menu);
+    
+  </script>
+
+</body>
+</html>

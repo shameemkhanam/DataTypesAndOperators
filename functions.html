@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body style="margin: 50px; font-weight: bold; font-size: 20px">
+    <script>
+      // function showMsg(){
+      //   document.write("hello world");
+      // }
+      // showMsg();
+      // // showMsg();
+
+      // function showMsg(fname,lname="begum"){//giving default values
+      //   document.write(`${fname}'s last name is ${lname}.`);
+      // }
+      // showMsg("shameem","khan");
+      // document.write("<br>");
+      // showMsg("shameem");
+
+      //nullish coalescing operator '??'
+      // let user = "shama";
+      // alert(user ?? "Anonymous");
+
+      // function PrimeNumbers(n){
+      //   nextPrime:
+      //   for ( let i=2; i<=n; i++){
+      //     for ( let j=2; j<i; j++){
+      //       if(i%j == 0) continue nextPrime;
+      //     }
+      //     document.write(i+"<br>");
+      //   }
+      // }
+      // PrimeNumbers(30);
+
+      // function sum(n1,n2){
+      //   return n1+n2;
+      // }
+      // let res = sum(34,32);
+      // document.write("the sum : " + res);
+
+      // function checkAge(age){
+      //   if(age>=18){
+      //     return "eligible";
+      //   }
+      //   else{
+      //     return "not eligible";
+      //   }
+      // }
+      // let res = checkAge(10);
+      // document.write(res);
+
+      //     function checkAge(age) {
+      //   if (age > 18) {
+      //     return true;
+      //   } else {
+      //     return confirm('Did parents allow you?');
+      //   }
+      // }
+      // Rewrite it, to perform the same, but without if, in a single line.
+      // function checkAge(age) {
+      //   // return (age > 18) ? true : confirm("did parents allow u?");
+      //   return (age > 18) || confirm("did u r allowed?");
+      // }
+      // let res = checkAge(16);
+      // document.write(res);
+
+      // Write a function min(a,b) which returns the least of two numbers a and b.
+      // function min(a,b){
+      //   if(a<b)
+      //   return a;
+      //   else
+      //   return b;
+      // }
+      // let res = min(3,-1);
+      // document.write(res);
+
+      // Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
+      // Create a web-page that prompts for x and n, and then shows the result of pow(x,n).
+      let x = prompt("Enter x :");
+      let n = prompt("Enter n : ");
+      function pow(x,n){
+        let res = x;
+        for(let i=1; i<n; i++){
+          res = res*x;
+        }
+        return res;
+      }
+      alert(pow(x,n));
+    </script>
+  </body>
+</html>
