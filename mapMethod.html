@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+</head>
+<body style="margin: 50px; font-weight: bold; font-size: 20px">
+  <script>
+    let arr = [11,4,9,20];
+    let newarr = arr.map(testFunc);
+    function testFunc(x){
+      return x*10;
+    }
+    document.write(newarr);
+    document.write("<br>");
+    let Arr2 = [
+      {fname:"shama",lname:"khan"},
+      {fname:"reena",lname:"roy"},
+      {fname:"tina",lname:"kapoor"}
+    ];
+    let newArr2 = Arr2.map(test2);
+    function test2(x){
+      // return x.fname;
+      return x.fname + " " + x.lname;
+    }
+    document.write(newArr2);
+  </script>
+</body>
+</html>
