@@ -36,3 +36,6 @@ var User = function(firstName, courseCount){
 
   // var rima = new User("rima",2);
   // rima.getFirstName();
+
+
+// console.log(typeof User);

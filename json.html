@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json</title>
+  </head>
+  <body>
+    <script>
+      let jsonObj = {
+        name: "shameem",
+        age: 33,
+        city: "Kalaburagi",
+      };
+
+      console.log(jsonObj);
+
+      // let jsonStr = JSON.stringify(jsonObj);
+      // console.log(jsonStr);
+
+      // // jsonStr = jsonStr.replace("shameem", "rameem");
+      // // console.log(jsonStr);
+
+      // let newjsonObj = JSON.parse(jsonStr);
+      // console.log(newjsonObj);
+
+      let jsonObjToStr = JSON.stringify(jsonObj);
+      console.log(typeof jsonObjToStr);
+
+      // localStorage.setItem("student", jsonObjToStr);
+      
+      let jsonObjToObj = JSON.parse(jsonObjToStr);
+      console.log(typeof jsonObjToObj);
+
+      console.log(jsonObjToObj.city);
+    </script>
+  </body>
+</html>
