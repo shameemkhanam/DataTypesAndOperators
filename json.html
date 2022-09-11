@@ -8,32 +8,207 @@
   </head>
   <body>
     <script>
-      let jsonObj = {
-        name: "shameem",
-        age: 33,
-        city: "Kalaburagi",
-      };
+      // let jsonObj = {
+      //   name: "shameem",
+      //   age: 33,
+      //   city: "Kalaburagi",
+      // };
 
-      console.log(jsonObj);
+      // console.log(jsonObj);
 
-      // let jsonStr = JSON.stringify(jsonObj);
-      // console.log(jsonStr);
-
-      // // jsonStr = jsonStr.replace("shameem", "rameem");
+      // // let jsonStr = JSON.stringify(jsonObj);
       // // console.log(jsonStr);
 
-      // let newjsonObj = JSON.parse(jsonStr);
-      // console.log(newjsonObj);
+      // // // jsonStr = jsonStr.replace("shameem", "rameem");
+      // // // console.log(jsonStr);
 
-      let jsonObjToStr = JSON.stringify(jsonObj);
-      console.log(typeof jsonObjToStr);
+      // // let newjsonObj = JSON.parse(jsonStr);
+      // // console.log(newjsonObj);
 
-      // localStorage.setItem("student", jsonObjToStr);
-      
-      let jsonObjToObj = JSON.parse(jsonObjToStr);
-      console.log(typeof jsonObjToObj);
+      // let jsonObjToStr = JSON.stringify(jsonObj);
+      // console.log(typeof jsonObjToStr);
 
-      console.log(jsonObjToObj.city);
+      // // localStorage.setItem("student", jsonObjToStr);
+
+      // let jsonObjToObj = JSON.parse(jsonObjToStr);
+      // console.log(typeof jsonObjToObj);
+
+      // console.log(jsonObjToObj.city);
+
+      //==============================================================================
+      // DATE : 11/09/2022
+      //==============================================================================
+
+      // let data;
+      // // data = JSON.stringify("struh");
+      // // data = JSON.stringify(343);
+      // // data = JSON.stringify(true);
+      // data = JSON.stringify([7,8,9]);
+
+      // console.log(data);
+      // console.log(typeof data);
+
+      //=============================================================================
+
+      // const student = {
+      //   name : "sana",
+      //   age : 25,
+      //   courses : ["html","javascript","css"],
+      //   isAdmin : false,
+      //   room : {
+      //     no : 234,
+      //     participants : ["as","fg"]
+      //   }
+      // }
+      // console.log( student);
+      // let studentStr = JSON.stringify(student);
+      // console.log(studentStr);
+      // // console.log( studentStr.repeat(2));
+
+      //====================================================================================
+
+      //circular references
+      //Error: Converting circular structure to JSON
+
+      // let room = {
+      //   no : 34
+      // }
+
+      // let meeting = {
+      //   title : "Conference",
+      //   day : "Monday",
+      //   participants : ["john","rita"]
+      // }
+
+      // meeting.place = room;         //
+      // // console.log(room);         //
+      // // console.log(meeting);      //
+      // room.occupiedBy = meeting;     //circular referencing not allowed in json.stringify
+
+      // // console.log(room);
+      // // console.log(meeting);
+      // let meetingStr = JSON.stringify(meeting);
+      // console.log(meetingStr);
+
+      // let meetingStr2 = JSON.stringify(meeting, ["title","participants"],"-");
+      // let meetingStr2 = JSON.stringify(meeting, null, "    ");
+      // let meetingStr2 = JSON.stringify(meeting, null, 4);  // no of spaces for indentation
+      // console.log(meetingStr2);
+
+      // let meetingStrWithReplacer = JSON.stringify(meeting, function replacer(key,value){
+      //   console.log(`${key} : ${value}`);
+      //   // return value;
+      //   return (key == 'day') ? undefined : value;
+      // } );
+      // console.log(meetingStrWithReplacer);
+      //----------------------------------------------------------
+      function replacer(key, value) {
+        // Filtering out properties
+        if (typeof value === "string") {
+          return undefined;
+        }
+        return value;
+      }
+
+      const foo = {
+        foundation: "Mozilla",
+        model: "box",
+        week: 45,
+        transport: "car",
+        month: 7,
+      };
+      console.log(JSON.stringify(foo, replacer));
+      // '{"week":45,"month":7}'
+
+      //================================================================================
+
+      // toJSON:-
+
+      // let room= {
+      //   no : 456
+      // }
+
+      // let meeting2 = {
+      //   title : "conference",
+      //   place : "Bengaluru",
+      //   date : new Date(),    // date have built in toJSON method
+      //   room                // room object , defined above
+      // }
+
+      // console.log(meeting2);
+
+      // let meeting2Str = JSON.stringify(meeting2);
+      // console.log(meeting2Str);
+      //-----------------------------------------------------
+
+      // let room = {
+      //   no : 120,
+      //   toJSON(){           //custom toJSON
+      //     return this.no;
+      //   }
+      // };
+
+      // let meeting3 = {
+      //   title : "meet3",
+      //   room
+      // };
+
+      // // console.log(room);
+      // // console.log(meeting3);
+
+      // let roomStr = JSON.stringify(room);
+      // let meeting3Str = JSON.stringify(meeting3);
+      // console.log(roomStr);
+      // console.log(meeting3Str);
+
+      //=================================================================
+      // JSON.parse
+      //=================================================================
+
+      // let numbers = "[3,5,6,7]";
+      // console.log(typeof numbers);
+      // let numJson = JSON.parse(numbers);
+      // console.log(typeof numJson);
+      // console.log(numJson[2]);
+      //===================================================================
+
+      // let meet = {
+      //   title: "conference 1",
+      //   date: new Date(),
+      // };
+      // let meetStr = JSON.stringify(meet);
+      // console.log(meetStr);
+      // let meetStrParsed = JSON.parse(meetStr);
+      // console.log(meetStrParsed);
+      // console.log(meetStrParsed.date.getDate()); // error
+
+      // let meetStrWithReviver = JSON.parse(meetStr, function(key, value){
+      //   if(key == "date") return new Date(value);
+      //   return value;
+      // });
+      // console.log(meetStrWithReviver.date.getDate()); // now works with reviver function
+      // console.log(meetStrWithReviver.date.getHours());
+      // console.log(meetStrWithReviver.date.getMinutes());
+      // console.log(meetStrWithReviver.date.getSeconds());
+
+      //============
+      // another ex with reviver function
+      let obj = {
+        p: 10,
+        no:40,
+        name : "hello"
+      };
+      let objStr = JSON.stringify(obj);
+      function reviver(key,value){
+        if(typeof value === "number"){
+          return value*2;
+        }
+        return value;
+
+      }
+      let res = JSON.parse(objStr, reviver);
+
+      console.log(res);
     </script>
   </body>
 </html>
