@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProtoInheritance</title>
+</head>
+<body>
+  <script>
+    const userProto = {
+      slogan : function(){
+        return "This company is the best!";
+      },
+      changeName : function(newName){
+        this.name = newName;
+      }
+    }
+
+    const harry = Object.create(userProto);
+    harry.name = "Harry";
+    harry.role = "Programmer";
+    harry.changeName("harry2");
+    console.log(harry);
+  </script>
+</body>
+</html>

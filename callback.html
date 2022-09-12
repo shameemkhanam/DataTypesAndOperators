@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback</title>
+  </head>
+  <body>
+    <script>
+      // function isEven(number)
+      // {
+      //   // if(number%2 === 0 ){
+      //   //   return true;
+      //   // }
+      //   // else{
+      //   //   return false;
+      //   // }
+
+      //   return (number%2) === 0;
+      // }
+      //------------------------------------------------
+      // const isEven = (num) => {   //ARROW FUNCTION
+      //   return num % 2 === 0;
+      // };
+      // // console.log(isEven(441));
+      // var result = [10,20,31,40].every(isEven);
+      // console.log(result);
+      //------------------------------------------------
+      // const result = [2,30,4].every((e)=>{
+      //   return e%2 === 0;
+      // });
+      // console.log(result);
+      //----------------------------------------------
+      // const result = [2,30,41].every((e)=>(e%2 === 0));
+      // console.log(result);
+      //=====================================================
+
+      // let funcA = () =>{
+      //   setTimeout(()=>{
+      //     console.log("Welcome funcA !");
+      //   }, 3000);
+
+      // }
+      // let funcB = () =>{
+      //   console.log("Welcome funcB !");
+      // }
+      // funcA();
+      // funcB();
+      // here in above ex funcA is called after 3sec, but funcB is called first....
+      // we don't want this to happen...we want that first funcA is executed after that funcB...
+      //so here callback function is used...The above code can be re-written as...
+
+      // let funcA = () =>{
+      //   setTimeout(()=>{
+      //     console.log("Welcome funcA !");
+      //     funcB();
+      //   }, 3000);
+
+      // }
+      // let funcB = () =>{
+      //   console.log("Welcome funcB !");
+      // }
+      // funcA();
+
+      // so for using callback function in above case:....
+      
+      // let funcA = (fname,callback) => {
+      //   setTimeout(() => {
+      //     console.log(`hello! ${fname} is name of funcA`);
+      //     callback();
+      //   }, 3000);
+      // };
+      // let funcB = () =>{
+      //   console.log("Welcome funcB !");
+      // }
+      
+      // funcA("func a", funcB); // callback function
+
+      //==========================================================
+
+      // function display(result){
+      //   document.write(`The result of calculation is : ${result}`);
+      // }
+      // function calculator(n1,n2,mycallback){
+      //   let sum = n1 + n2;
+      //   mycallback(sum);
+      // }
+      // calculator(20, 30, display);
+
+      //==============================================================
+
+      const person1 = (friend1, callback) => {
+        console.log(`I m busy right now, i m talking to ${friend1}. I will call u back`);
+        callback();
+      };
+      const person2 = () => {
+        console.log(`I called u back...dekha`);
+      };
+      person1("reema", person2);
+    </script>
+  </body>
+</html>

@@ -19,7 +19,7 @@
 var User = function(firstName, courseCount){
     this.firstName = firstName;
     this.courseCount = courseCount;
-    this.getCouseCount = function(){
+    this.getCourseCount = function(){
       console.log(`course count is : ${this.courseCount}`);
     };
   };
