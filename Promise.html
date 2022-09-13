@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <script>
+      //TASK:
+      //API student:=
+      //1 : after 2sec roll no
+      //2 : next after 2sec name and age
+
+      // every task is to be considered as a promise
+
+      let rollNo = [1, 2, 3, 4, 5];
+      let biodata = {
+        name: "shameem",
+        age: 33,
+      };
+
+      //execute
+      //produce promise...
+      let promObj = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(rollNo);
+          // reject("sorry...data not available!");
+        }, 2000);
+      });
+
+      const getBiodata = (indexdata) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(
+            (indexdata) => {
+              resolve(
+                `My roll no is ${indexdata}, I m ${biodata.name} and age is ${biodata.age}.`
+              );
+            },
+            2000,
+            indexdata
+          );
+        });
+      };
+
+      //promise consume...method 1
+      // promObj.then((roll_No) => {
+      //     console.log(roll_No);
+      //     getBiodata(roll_No[1]).then((kuchbhi) => {
+      //       console.log(kuchbhi);
+      //     });
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+
+        //promise consume...method 2
+      promObj.then((roll_No) => {
+          console.log(roll_No);
+          return getBiodata(roll_No[1]);
+        }).then((kuchbhi) => {
+            console.log(kuchbhi);
+          })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

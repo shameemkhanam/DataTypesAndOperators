@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises Basics</title>
+  </head>
+  <body>
+    <script>
+            // let complete = false;
+
+            // let prom = new Promise((resolve, reject)=>{
+            //   if(complete){
+            //     resolve("I m successful !");
+            //   }
+            //   else{
+            //     reject("I m failed !");
+            //   }
+            // });
+            //-----------------------------------------------
+
+            // function promFunc(complete) {
+            //   return new Promise((resolve, reject) => {
+
+            //     console.log("Fetching data....Plz wait!");
+            //     setTimeout(()=>{
+            //       if (complete) {
+            //       resolve("I m successful !");
+            //     } else {
+            //       reject("Error..I m failed !");
+            //     }
+            //     }, 2000);
+
+            //   });
+            // }
+
+            // // let onfulfill = (result) => {     //from resolve above
+            // //   console.log(result);
+            // // }
+
+            // // let onreject = (error) => {     //from reject above
+            // //   console.log(error);
+            // // }
+
+            // // promFunc(false).then(onfulfill).catch(onreject);
+
+            // promFunc(true).then((result)=>{
+            //   console.log(result);
+            // }).catch((error)=>{
+            //   console.log(error);
+            // });
+
+            //==========================================================================
+
+            // function promiseFunc2(num1, num2) {
+            //   return new Promise((resolve, reject) => {
+            //     console.log("Calculating data...");
+            //     let numRes = num1 * num2;
+            //     setTimeout(() => {
+            //       if (numRes % 2 === 0) {
+            //         resolve(
+            //           `Calculation Successful!  Multiplication Answer (EVEN): ${numRes}`
+            //         );
+            //       } else {
+            //         reject(
+            //           `Calculation unsuccessful ! Multiplication Answer (ODD) : ${numRes}`
+            //         );
+            //       }
+            //     }, 2000);
+            //   });
+            // }
+
+            // promiseFunc2(3, 7)
+            //   .then((result) => {
+            //     console.log(result);
+            //   })
+            //   .catch((error) => {
+            //     console.log(error);
+            //   });
+
+            //===========================================================================
+            //TASK FROM javascript.info:
+      //       The built-in function setTimeout uses callbacks. Create a promise-based alternative.
+
+      // The function delay(ms) should return a promise. That promise should resolve after ms milliseconds, so that we can add .then to it, like this:
+
+      function delay(ms) {
+        return new Promise((resolve)=>{
+          setTimeout(resolve,ms);
+        });
+      }
+
+      delay(3000).then(() => alert('runs after 3 seconds'));
+    </script>
+  </body>
+</html>
