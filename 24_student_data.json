@@ -1,0 +1,22 @@
+[
+  {
+    "name" : "shameem",
+    "age" : 33,
+    "city" : "Kalabuaragi"
+  },
+  {
+    "name" : "neeta",
+    "age" : 32,
+    "city" : "Goa"
+  },
+  {
+    "name" : "jyothi",
+    "age" : 34,
+    "city" : "Nepal"
+  },
+  {
+    "name" : "amrita",
+    "age" : 33,
+    "city" : "Bengaluru"
+  }
+]

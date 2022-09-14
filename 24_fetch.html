@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch</title>
+  </head>
+  <body>
+    <form action="" id="myForm">
+      Title : <input type="text"  id="titleId" /><br /><br />
+      Body : <input type="text"  id="bodyId" /><br /><br />
+      User Id : <input type="text"  id="userId" /><br /><br />
+      <input type="submit" value="Submit" id="submitId" />
+    </form>
+
+    <script>
+      // fetch("24_textFile.txt")
+      // .then((response) => {
+      //   console.log(response);
+      // });
+
+      // fetch("24_textFile.txt")
+      // .then((response) => {
+      //   console.log(response.text()); // response.text() for text file...else for json response.json()
+      // });
+
+      // fetch("24_textFile.txt").then((response) => {
+      //   return response.text();
+      // }).then((result) => {
+      //   // console.log(result);
+      //   document.write(result);
+      // });
+
+      // shorter way ->
+      // fetch("24_textFile.txt")
+      // .then((response) => response.text())
+      // .then ((result) => console.log(result));
+
+      // fetch("https://jsonplaceholder.typicode.com/users")
+      // .then((response) => response.json())
+      // .then ((result) => console.log(result))
+      // .catch((error) => console.log(error));
+
+      // fetch("https://jsonplaceholder.typicode.com/users") // no 1users data on this server
+      // .then((response) => response.json())
+      // .then ((result) => console.log(result))
+      // .catch((error) => console.log(error));  // so, v will get error 404
+
+      // to print data in the document:->
+      // fetch("https://jsonplaceholder.typicode.com/users") // no 1users data on this server
+      // .then((response) => response.json())
+      // .then ((result) => {
+      //   console.log(result);
+      //   for ( let i in result){
+      //     var a = `Name : ${result[i].name}  -  Email : ${result[i].email} -  City : ${result[i].address.city} <br>`;
+      //     document.write(a);
+      //   }
+      // })
+      // .catch((error) => console.log(error));
+
+      //=============================================================
+      //fetching data from our json file
+
+      // fetch("24_student_data.json")
+      // .then((response) => {
+      //   return response.json();
+      // })
+      // .then((result) => {
+      //   console.log(result);
+      //   for ( let x in result){
+      //     document.write(`${result[x].name} - ${result[x].age} - ${result[x].city} <br>`);
+      //   }
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      //   document.write("Can't fetch data...");
+      // });
+
+      //============================================================
+      //INSERTING DATA INTO THE SERVER: POST METHOD
+      //===========================================================
+      // fetch("https://jsonplaceholder.typicode.com/posts", {
+      //   method: "POST",
+      //   body: JSON.stringify({
+      //     title: "foo",
+      //     body: "bar",
+      //     userId: 1,
+      //   }),
+      //   headers: {
+      //     "Content-type": "application/json; charset=UTF-8",
+      //   },
+      // })
+      //   .then((response) => response.json())
+      //   .then((json) => console.log(json));
+
+      //--------------------------------------------------------
+      // <form action="" id="myForm">
+      //   <input type="text" value="Title" id="titleId"><br><br>
+      //   <input type="text" value="Body" id="bodyId"><br><br>
+      //   <input type="text" value="User Id" id="userId"><br><br>
+      //   <input type="submit" value="Submit" id="submitId">
+      // </form>
+
+      document.getElementById("submitId").addEventListener("click",(e) => {
+        e.preventDefault();    //not refresh the page
+
+        var obj = {
+        title : document.getElementById("titleId").value,
+        body : document.getElementById("bodyId").value,
+        userId : document.getElementById("userId").value
+      };
+      fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        body: JSON.stringify(obj),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+      });
+
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body>
+    <script>
+      // const func1 = () => {
+      //   return "func1 called";
+      // };
+      // const func2 = async() => {   //async makes the function return a Promise
+      //   setTimeout(() => {
+      //     return "After 2sec func2 called";
+      //   }, 2000);
+      // };
+      // const func3 = () => {
+      //   return "func3 called";
+      // };
+
+      // let val1 = func1();
+      // console.log(val1);
+
+      // let val2 = func2();
+      // console.log(val2);
+
+      // let val3 = func3();
+      // console.log(val3);
+
+      //==================================================
+      //ASYNC-AWAIT
+      //===================================================
+
+    const func1 = () => {
+      return "func1 called";
+    };
+
+    const func2 = () => {
+      return new Promise ((resolve) => {
+        setTimeout(() => {
+        resolve("func2, after 3sec");
+        
+      }, 3000);
+      });
+    };
+
+    const func3 = () => {
+      return "func3 called";
+    };
+
+    const callingFuncs = async () => {
+      let val1 = func1();
+      console.log(val1);
+
+      let val2 = await func2();
+      console.log(val2);
+
+      let val3 = func3();
+      console.log(val3);
+    }
+    callingFuncs();
+    </script>
+  </body>
+</html>
