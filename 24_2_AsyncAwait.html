@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AsyncAwait 2</title>
+  </head>
+  <body>
+    <script>
+      // const test = async () => {
+      //   return "Hello";
+      // }
+      // console.log(test());
+      //-------------------------------------
+      // const test = async () => "Hello";
+      // test().then((res) => console.log(res));
+      //--------------------------------------
+      // const test = async () => {
+      //   return "Hello world";
+      // }
+
+      // test().then((result) => {
+      //   console.log(result);
+      // });
+
+      //==============================================
+
+      // const testAsync = async () => {
+      //   console.log("A");
+      //   await console.log("A1");
+      //   console.log("B");
+      //   console.log("C");
+      // };
+      // testAsync();
+
+      //=================================================
+
+      async function test() {
+        // const response = await fetch("24_student_data.json");
+        // const data = await response.json();
+        // return data;
+        
+      }
+      // console.log(test());
+      test().then((res) => {
+        console.log(res);
+      }).catch((error) => {
+        console.log(error);
+      });
+    </script>
+  </body>
+</html>

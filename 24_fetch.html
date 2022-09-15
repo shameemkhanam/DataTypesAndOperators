@@ -8,9 +8,9 @@
   </head>
   <body>
     <form action="" id="myForm">
-      Title : <input type="text"  id="titleId" /><br /><br />
-      Body : <input type="text"  id="bodyId" /><br /><br />
-      User Id : <input type="text"  id="userId" /><br /><br />
+      Title : <input type="text" id="titleId" /><br /><br />
+      Body : <input type="text" id="bodyId" /><br /><br />
+      User Id : <input type="text" id="userId" /><br /><br />
       <input type="submit" value="Submit" id="submitId" />
     </form>
 
@@ -102,26 +102,43 @@
       //   <input type="submit" value="Submit" id="submitId">
       // </form>
 
-      document.getElementById("submitId").addEventListener("click",(e) => {
-        e.preventDefault();    //not refresh the page
+      // document.getElementById("submitId").addEventListener("click", (e) => {
+      //   e.preventDefault(); //not refresh the page
 
-        var obj = {
-        title : document.getElementById("titleId").value,
-        body : document.getElementById("bodyId").value,
-        userId : document.getElementById("userId").value
-      };
-      fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        body: JSON.stringify(obj),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-      });
+      //   var obj = {
+      //     title: document.getElementById("titleId").value,
+      //     body: document.getElementById("bodyId").value,
+      //     userId: document.getElementById("userId").value,
+      //   };
+      //   fetch("https://jsonplaceholder.typicode.com/posts", {
+      //     method: "POST",
+      //     body: JSON.stringify(obj),
+      //     headers: {
+      //       "Content-type": "application/json; charset=UTF-8",
+      //     },
+      //   })
+      //     .then((response) => response.json())
+      //     .then((json) => console.log(json));
+      // });
 
-      
+      //----------------------------
+      // other method for form data
+      // var obj = {
+      //     title: document.getElementById("titleId").value,
+      //     body: document.getElementById("bodyId").value,
+      //     userId: document.getElementById("userId").value,
+      //   };
+
+      //   fetch("https://jsonplaceholder.typicode.com/posts", {
+      //     method: "POST",
+      //     body: new FormData(document.getElementById("myForm")),
+      //     headers: {
+      //       "Content-type": "application/x-www-form-urlencoded",
+      //     },
+      //   })
+      //     .then((response) => response.json())
+      //     .then((json) => console.log(json));
+      // });
     </script>
   </body>
 </html>
