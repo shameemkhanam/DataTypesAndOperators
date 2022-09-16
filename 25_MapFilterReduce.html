@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      //MAP
+      let numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // const dblArray = (x) => {
+      //   return x * 2;
+      // }
+      // const dblresult = numArr.map(dblArray);
+      // console.log(dblresult);
+
+      // const tripleArray = (x) => {
+      //   return x * 3;
+      // }
+      // const trpresult = numArr.map(tripleArray);
+      // console.log(trpresult);
+
+      // function binary(x){
+      //   return x.toString(2);
+      // }
+      // let output = numArr.map(binary);
+      // console.log(output);
+
+      //=============================================
+      //FILTER
+      // let numArr = [1,2,3,4,5.,6,7,8,9,10];
+
+      // function isEven(x){
+      //   return x%2===0;
+      // }
+      // const output = numArr.filter(isEven);
+      // console.log(output);
+
+      // function isOdd(x) {
+      //   return x % 2;
+      // }
+      // const output = numArr.filter(isOdd);
+      // console.log(output);
+
+      // function isgreater(x) {
+      //   return x > 2;
+      // }
+      // const output = numArr.filter(isgreater);
+      // console.log(output);
+
+      //OR
+
+      // const output = numArr.filter((x) => x > 5);
+      // console.log(output);
+
+      //=====================================================
+      // REDUCE
+
+      // function findSum(arr){
+      //   let sum = 0;
+      //   for (let i = 0; i < arr.length; i++) {
+      //     sum += arr[i];          
+      //   }
+      //   return sum;
+      // }
+      // let array = [20,3,4];
+      // console.log(findSum(array));
+
+      // now with reduce , the above code can be written as
+
+      let arr = [245,3,4];
+      let output = arr.reduce((acc, cur) => {
+        acc = acc + cur;
+        return acc;
+      }, 0 );
+      console.log(output);
+    </script>
+  </body>
+</html>

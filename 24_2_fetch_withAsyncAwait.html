@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <script>
+      // function getData(){
+      //   let url = "24_student_data.json";
+      //   fetch(url).then((respose) => {
+      //     return respose.json();
+      //   }).then((data) => {
+      //     console.log(data);
+      //   });
+      // }
+
+      // function getData(){
+      //   let url = "https://api.github.com/users";
+      //   fetch(url).then((respose) => {
+      //     return respose.json();
+      //   }).then((data) => {
+      //     console.log(data);
+      //     for ( let x in data){
+      //       document.write(`${x} : ${data[x].login} <br>` );
+      //     }
+      //   });
+      // }
+      // getData();
+
+      // function postData() {
+      //   let url = "https://jsonplaceholder.typicode.com/posts";
+      //   let data = { title: "tit1", body: "bod", userId: 11 };
+      //   let params = {
+      //     method: "post",
+      //     body: JSON.stringify(data),
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //   };
+      //   fetch(url, params)
+      //     .then((res) => res.json())
+      //     .then((data) => console.log(data))
+      //     .catch((err) => console.log(err));
+      // }
+      // postData();
+
+      //======================================================
+
+      async function harry() {
+        let response = await fetch(
+          "https://jsonplaceholder.typicode.com/posts"
+        );
+        let data = await response.json();
+        return data;
+      }
+
+      console.log("Before calling harry..");
+      harry()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => console.log(error));
+
+        console.log("After calling harry..");
+    </script>
+  </body>
+</html>
