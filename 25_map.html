@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1,2,3,4,5];
+      let arr2 = arr.map((value,index,array) => {
+        
+        return (value+1, index);
+      });
+      console.log(arr2);
+      //1) Make an array of numbers that are doubles of the first array
+      // function doubleNumbers(arr) {
+      //   return arr.map(x => x*2);
+      // }
+      // console.log(doubleNumbers([2, 5, 100]));
+
+      // 2) Take an array of numbers and make them strings
+      // function stringItUp(arr) {
+      //   // your code here
+      //   return arr.map((x) => x.toString());
+      // }
+      // console.log(stringItUp([2, 5, 100])); // ["2", "5", "100"]
+
+      // 3) Capitalize each of an array of names
+      // function capitalizeNames(arr){
+      //   // your code here
+      //   return arr.map((x) => x.toUpperCase() );
+      // }
+      // console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])); // ["John",
+
+      // 4) Make an array of strings of the names
+      // function namesOnly(arr) {
+      //   // your code here
+      //   return arr.map((x) => x.name);
+      // }
+
+      // console.log(
+      //   namesOnly([
+      //     {
+      //       name: "Angelina Jolie",
+      //       age: 80,
+      //     },
+      //     {
+      //       name: "Eric Jones",
+      //       age: 2,
+      //     },
+      //     {
+      //       name: "Paris Hilton",
+      //       age: 5,
+      //     },
+      //     {
+      //       name: "Kayne West",
+      //       age: 16,
+      //     },
+      //     {
+      //       name: "Bob Ziroll",
+      //       age: 100,
+      //     },
+      //   ])
+      // );
+      // ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
+
+      
+    </script>
+  </body>
+</html>

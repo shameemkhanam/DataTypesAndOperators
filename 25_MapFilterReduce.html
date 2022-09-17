@@ -70,12 +70,19 @@
 
       // now with reduce , the above code can be written as
 
-      let arr = [245,3,4];
-      let output = arr.reduce((acc, cur) => {
-        acc = acc + cur;
-        return acc;
-      }, 0 );
-      console.log(output);
+      // let arr = [245,3,4];
+      // let output = arr.reduce((acc, cur) => {
+      //   acc = acc + cur;
+      debugger;
+
+      //   return acc;
+      // }, 0 );
+      // console.log(output);
+
+      let output = arr.reduce(function(result,item){
+        return result + item ;
+      }, 0);
+      console.log((output));
     </script>
   </body>
 </html>

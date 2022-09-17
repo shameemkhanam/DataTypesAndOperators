@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reduce</title>
+  </head>
+  <body>
+    <script>
+      // let array = [3, 4, 6, 5];
+
+      // function findMax(arr) {
+      //   let max = 0;
+      //   for (let i = 0; i < array.length; i++) {
+      //     if (array[i] > max) max = array[i];
+      //   }
+      //   return max;
+      // }
+      // let output = findMax(array);
+      // console.log(output);
+
+      // let output = array.reduce((max, cur) => {
+      //   if(cur > max) {
+      //     max = cur;
+      //   }
+      //   return max;
+      // }, 0);
+
+      //=================================================
+      //OTHER EXAMPLES
+
+      // const users = [
+      //   {fname : "salman", lname : "khan", age : 15},
+      //   {fname : "akshay", lname : "kumar", age : 25},
+      //   {fname : "reena", lname : "gupta", age : 34},
+      //   {fname : "rita", lname : "kapoor", age : 45}
+      // ];
+
+      // let output = users.map((x) => x.fname + " " + x.lname);
+      // console.log(output);
+      //--------------------
+      //now find { people with age 45 :2, 55 :1, 34 :1} -> here use reduce because it returns one value of array ie. an object
+
+      // const output = users.reduce(function(acc,cur){
+      //   if(acc[cur.age]){
+      //     acc[cur.age]++;
+      //   }else{
+      //     acc[cur.age] = 1;
+      //   }
+      //   return acc;
+      // }, {});
+
+      // console.log(output);
+
+      //--------list fname of all people from above obj whose age<30
+      // let output = users.filter((x) => (x.age < 30))
+      // .map((x) => x.fname);
+      // console.log(output);
+      //--------using reduce
+      // let output = users.reduce((acc,cur) => {
+      //   if(cur.age<30){
+      //     acc.push(cur.fname);
+      //   }
+      //   return acc;
+      // }, []);
+      // console.log(output);
+
+      //===============================================
+      //sum of array elements
+      // let arr = [2,3,4];
+      // let output = arr.reduce((acc, cur) => {
+      //   return acc+cur;
+      // },0);
+      // console.log(output);
+      //----------------------------------------------------
+      // product of array elements using reduce
+
+      // let arr = [2,3,4];
+      // let output = arr.reduce((acc, cur) => {
+      //   return acc*cur;
+      // },1);
+      // console.log(output);
+      //-------------------------------------------
+      //average of array elements using reduce
+
+      let arr = [2, 3, 4, 5, 1];
+      let avr =
+        arr.reduce((acc, cur) => {
+          return acc + cur;
+        }, 0) / arr.length;
+      console.log(avr);
+    </script>
+  </body>
+</html>
