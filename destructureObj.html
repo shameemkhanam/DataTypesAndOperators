@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Obj</title>
+  </head>
+  <body>
+    <script>
+      let userObj = {
+        name: "shameem",
+        age: 33,
+        city: "glb",
+      };
+      //normally
+      // console.log(userObj.name);
+      // console.log(userObj.age);
+
+      // let {name, city} = userObj; // destructuring objects
+
+      // console.log(name); // var names should be same as prop names...name == name, age == age
+      // console.log(city);    //which props we want , v can take , no need of full obj props
+
+      let { name: n, city: c } = userObj; // v can give alias names to ...ex : n for name
+      console.log(n);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoisting</title>
+</head>
+<body>
+  <script>
+
+    // before execution all funcs and vars are initialized....
+    
+    // let x = 10;
+    // function getName(){
+    //   console.log("hello world");
+    // }
+    // console.log(x);
+    // getName();
+
+    // console.log(x);  //x = undefined
+    // getName();
+    // var x = 10;
+    // function getName(){
+    //   console.log("hello world");
+    // }
+
+    console.log(x);  
+    getName();    //getName is undefined...bcoz it is arrow func...treated as var
+    var x = 10;
+    var getName = () => {
+      console.log("hello world");
+    }
+    
+  </script>
+</body>
+</html>

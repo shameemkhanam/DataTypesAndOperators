@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      // const outerFunc = (a) => {
+      //   let b = 10;
+      //   const innerFunc = () => {       //closure: innerFunc can access b and a also
+      //     let sum = a + b;
+      //     console.log(`The sum of a and b is ${sum}`);
+      //   }
+      //   innerFunc();        // lexical scoping also
+      // }
+      // outerFunc(5);
+
+      // the above ex is both for lexical scoping and also for closure
+
+      //but below is only closure ex:
+      // const outerFunc = (a) => {
+      //   let b = 10;
+      //   const innerFunc = () => {
+      //                             //closure: innerFunc can access b and a also
+      //     let sum = a + b;
+      //     console.log(`The sum of a and b is ${sum}`);
+      //   };
+      //   return innerFunc; // lexical scoping also // here after returning innerFunc ,the outerFunc's execution context is deleted from the call stack..
+      // };
+      // let inner = outerFunc(5);
+      // console.dir(inner);
+      // inner();
+
+      // funcstions when returned they still maintain their vars , params..they remember those vars and params
+
+      // another example of closure
+
+      // function x(){
+      //   var a = 7;
+      //   function y(){
+      //     console.log(a);
+      //   }
+      //   return y; //here after returning, x will be deleted frm call stack,
+      // }
+      // let z = x();
+      // console.log(z);
+      // z();  // but here z can access a, because it remembers that a.....this is closure
+
+      //---the above code can be written as
+      // function x() {
+      //   var a = 7;
+      //   return function y() {
+      //     console.log(a);
+      //   };
+      // }
+      // let z = x();
+      // console.log(z);
+      // z();
+
+      //==================================
+      // closure with setTimeout
+
+      // function x(){
+      //   let i=1;
+      //   setTimeout(()=>{
+      //     console.log(i);
+      //   },2000);
+      //   console.log("hello world");
+      // }
+      // x();
+
+      //============print nums 1 to 5 each after 1 sec gap
+
+      function x(){
+        for(var i=1; i<=5; i++){
+          function closr(x){
+          setTimeout(() => {     //closure
+            console.log(x);
+          }, x*1000);
+        }
+        closr(i);
+      }
+      
+        console.log("hello!");
+      }
+      x();
+
+      
+    </script>
+  </body>
+</html>

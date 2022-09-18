@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructure Array</title>
+</head>
+<body>
+  <script>
+    // let array = ["shameem", 45, "gulbarga"];
+    // let name = array[0];
+    // let age = array[1];
+    // let city = array[2];
+    // console.log(name, age, city);
+
+    // now Destructuring the array:->
+
+    // let array = ["shameem", 45, "gulbarga"];
+    // let [name, age, city] = array;
+    // console.log(name, age, city);
+
+    // let array = ["shameem", 45, "gulbarga",["3","5000"]];
+    // let [name, age, city, experience, salary] = array;
+    // console.log(name, age, city, experience, salary);
+    // console.log(experience);
+
+    //with rest operator
+    // let array = ["shameem", 45, "gulbarga",["3","5000"]];
+    // let [name, ...args] = array;
+    // console.log(name);
+    // console.log(args);
+
+    //with functions
+    // function user( [name, age, city, experience, salary]){
+    //   console.log(name);
+    //   console.log(age);
+    //   console.log(city);
+    //   console.log(experience);
+    //   console.log(salary);
+    // }
+    // user(["shama",22,"kullu", 1 , 2000]);
+
+    //-----------
+
+    function user(){
+      return ["yahoo", 23, "zumba"];
+    }
+    let [name, age, city] = user();
+
+    console.log(age);
+
+
+  </script>
+</body>
+</html>
