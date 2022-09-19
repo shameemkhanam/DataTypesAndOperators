@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Fn</title>
+  </head>
+  <body>
+    <script>
+      // function x(){
+      //   console.log("Hello world!");
+      // }
+      // function y(x){        //here y is a  higher order fn, x is callback function
+      //   x();
+      // }
+
+      //==========================================================
+      //calculate areas, circumference and diameter of circles with radii in the array radius
+
+      //generally we write below type of code:
+      // const radius = [2,1,4,5];
+      // const calculateArea = (radius) => {
+      //   let output = [];
+      //   for(let i=0; i<radius.length; i++){
+      //     output.push(Math.PI * radius[i] * radius[i]);
+      //   }
+      //   return output;
+      // }
+      // console.log(calculateArea(radius));
+
+      // const calculateCircum = (radius) => {
+      //   let output = [];
+      //   for(let i=0; i<radius.length; i++){
+      //     output.push(2 * Math.PI * radius[i]);
+      //   }
+      //   return output;
+      // }
+      // console.log(calculateCircum(radius));
+
+      // const calculateDiameter = (radius) => {
+      //   let output = [];
+      //   for(let i=0; i<radius.length; i++){
+      //     output.push(2 * radius[i]);
+      //   }
+      //   return output;
+      // }
+      // console.log(calculateDiameter(radius));
+
+      //========================================================
+      //instead of above code we can make our code more reusable by following code...
+
+      const radius = [1, 2, 3, 4];
+
+      const area = (radius) => {
+        return Math.PI * radius * radius;
+      };
+
+      const circumference = (radius) => {
+        return 2 * Math.PI * radius;
+      };
+
+      const diameter = (radius) => {
+        return 2 * radius;
+      };
+
+      const calculate = (radius, logic) => {
+        const output = [];
+        for (let i = 0; i < radius.length; i++) {
+          output.push(logic(radius[i]));
+        }
+        return output;
+      };
+
+      console.log(radius.map(area));  //same as our calculate function
+
+      console.log(calculate(radius, area));
+      // console.log(calculate(radius, circumference));
+      // console.log(calculate(radius, diameter));
+    </script>
+  </body>
+</html>
