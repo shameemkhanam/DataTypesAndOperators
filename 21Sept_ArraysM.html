@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <script>
+    // const users = ["sana", "lata", "meeta", "lata"];
+
+    // // console.log(users.indexOf("lata",2));   //search start with 2nd index 
+    // console.log(users.indexOf("lata"));   //search start with 2nd index 
+
+    // console.log(users.lastIndexOf("lata"));   //backward search
+    // console.log(users[users.indexOf("lata")]);
+
+    const newTodos = [{
+      title : "buy bread",
+      isDone : false,
+      articlesRead : 5
+    },{
+      title : "do gym",
+      isDone : false,
+      articlesRead : 2
+    },{
+      title : "read newspaper",
+      isDone : true,
+      articlesRead : 4
+    }];
+
+    let sumOfRead = 0;
+    newTodos.forEach((ele)=>{
+      sumOfRead += ele.articlesRead;
+    });
+    console.log(sumOfRead);
+  </script>
+</body>
+</html>
