@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22 Sept</title>
+  </head>
+  <body>
+    <script>
+      //1. create an array of no.s and take input frm the user to add nos to this array:->
+
+      // let arr = [1, 2, 3, 4];
+      // let num = prompt("Enter a no. to add to the array : ");
+      // num = Number.parseInt(num);
+      // arr.push(num);
+      // console.log(arr);
+      //==========================================================================
+
+      //2. Keep adding no.s to the array in (1) problem, until 0 is added to the array.
+
+      // let arr = [1, 2, 3, 4];
+      // let num;
+      // do{
+      // num = prompt("Enter a no. to add to the array : ");
+      // num = Number.parseInt(num);
+      // arr.push(num);
+      // }while(num != 0);
+
+      // console.log(arr);
+      //==========================================================================
+      //3. Filter for no.s divisible by 10 from a given array..
+
+      // let arr = [20,23,25,40,6750];
+
+      // let result = arr.filter((num) => (num % 10 == 0));
+      // console.log(result);
+
+      //==========================================================================
+
+      //4. Create an array of square of given no.s...
+
+      // let arr = [10,12,13,670];
+      // let res = arr.map((num) => {
+      //   return num**2;
+      // });
+      // console.log(res);
+      //==================================================
+
+      //5. Use reduce to calculate factorial of a given no. frm an array of first n natural no.s(n being the no. whose factorial needs to be calculated).
+
+      // let arr = [1,2,3,4,5,6];
+      // let n = arr.reduce((acc,cur) => {
+      //   return acc*cur;
+      // })
+      // console.log(n);
+
+      //======================================================
+
+      //6. Guess the  no. : Generate a random no. and store it in a var. The pgm then takes input frm the user to tell them whether the guess was correct, greater or lesser than the original no.
+      // (100 - no.of guesses) is the score of the user. the pgm is expected to terminate once the user guessed the correct no. no. should be b/n 1-100..
+
+      let noOfGuess = 0;
+      let randmNo = Math.floor(Math.random()*100) + 1;
+      console.log(randmNo);
+
+      while(noOfGuess<100) {
+        let userInput = Number.parseInt(prompt("Enter a no. in range (1 - 100):"));
+
+        if(userInput < randmNo){
+          alert("lesser than expected no..try again");
+        }
+        else if(userInput > randmNo){
+          alert("greater than expected no..try again");
+        }
+        else if(userInput === randmNo){
+          let score = 100 - noOfGuess;
+          alert("Congrats!! you won with score " + score);
+          break;
+        }
+        else{
+          alert("try again...");
+        }
+        noOfGuess++;
+      } 
+    </script>
+  </body>
+</html>
