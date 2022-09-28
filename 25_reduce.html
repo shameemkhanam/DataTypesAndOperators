@@ -84,12 +84,24 @@
       //-------------------------------------------
       //average of array elements using reduce
 
-      let arr = [2, 3, 4, 5, 1];
-      let avr =
-        arr.reduce((acc, cur) => {
-          return acc + cur;
-        }, 0) / arr.length;
-      console.log(avr);
+      // let arr = [2, 3, 4, 5, 1];
+      // let avr =
+      //   arr.reduce((acc, cur) => {
+      //     return acc + cur;
+      //   }, 0) / arr.length;
+      // console.log(avr);
+
+      //or
+
+      let arr = [6,6,3];
+      let avg = arr.reduce((accu, curitem, index, array) => {
+        let total = accu+curitem;
+        if(index === array.length-1){
+        total = total/array.length;
+        }
+        return total;
+      });
+      console.log(avg);
     </script>
   </body>
 </html>

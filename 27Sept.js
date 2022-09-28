@@ -116,7 +116,7 @@
 //=====================================================================================
 
 //8. Write a function that turns a deep array into a plain array. Please, do not use array.flat(); to make this task more enjoyable.
-// let arr = [1, 2, [3, 4, [5]]];
+let arr = [1, 2, [3, 4, [5]]];
 // console.log(arr.flat(3));
 //or
 // console.log(arr.flat(Infinity));
@@ -128,13 +128,15 @@
 //       acc = acc.concat(flatten(item));
 //     }
 //     else{
-//       acc.push(item);
+//       acc.push(item);    //or
+// acc = [...acc,item];
 //     }
 //     return acc;
 //   },[]);
 //   return flattenedArr;
 // };
 // console.log(flatten(arr));
+
 
 //=====================================================================================
 // 9. finding avg of array elements:
