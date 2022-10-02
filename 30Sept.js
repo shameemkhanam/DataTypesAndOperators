@@ -83,12 +83,18 @@
 
 const dashBetEven = (num) => {
   let numStr = num.toString();
-  let result = [str[0]];
-  for(let i=1; i<numStr.length; i++){
-    if(str[i-1]%2==0 && str[i]%2 ==0)
-
+  let result = [numStr[0]];
+  for ( let i=1; i<numStr.length; i++){
+    if(numStr[i-1]%2==0 && numStr[i]%2==0){
+      result.push("-"+numStr[i]);
+    }
+    else{
+      result.push(numStr[i]);
+    }
   }
+  return result.join("");
 }
+console.log(dashBetEven(025468));
 
 
 
