@@ -52,9 +52,9 @@ var a = ["sallu","abbu","neetu","meetu","neetu"];
 
 // a.pop();
 // a.push("zeetu");
-// a.shift();
-// a.unshift("newValue");
-// console.log(a);
+a.shift();
+a.unshift("newValue");
+console.log(a);
 //----------------------------------------------
 
 let ar1 = ["a","b","c"] ;
@@ -107,18 +107,18 @@ let ar3 = ["f","g"];
 //   return age >= 18;
 // }
 
-let a1 = [12,14,20,18];
-// let b1 = a1.find(check);
+// let a12 = [12,14,20,18];
+// let b1 = a12.find(check);
 // console.log(b1);
 // function check(age){
-//   return age >=18;
+//   return age >=12;
 // }
 
 
-// b1 = a1.findIndex(check);
+// b1 = a12.findIndex(check);
 // console.log(b1);
 // function check(age){
-//   return age >=18;
+//   return age >=12;
 // }
 
 // let b1 = a1.filter(checkAge);
@@ -133,8 +133,8 @@ let arrr = ["hh","kk","ll","oo"];
 
 // arrr.fill("h");
 // arrr.fill("h",1);
-arrr.fill("h",1,3);
-console.log(arrr);
+arrr.fill("h",1,4);
+// console.log(arrr);
 
 
 

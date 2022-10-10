@@ -80,14 +80,14 @@ Strip off the first value of the array and show it.
 Prepend Rap and Reggae to the array.
 */
 
-// let styles = ["Jazz", "Blues","fff"];
+let styles = ["Jazz", "Blues","fff"];
 // // styles.push("Rock-n-Roll");
 
 // // styles[Math.ceil((styles.length-1)/2)]="Classics";
+console.log(styles);
+// console.log(styles.shift());
 
-// // styles.shift();
-
-// styles.unshift("Rap","Reggae");
-// console.log(styles);
+styles.unshift("Rap","Reggae");
+console.log(styles);
 
 

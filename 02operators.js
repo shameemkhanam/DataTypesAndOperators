@@ -70,7 +70,7 @@ console.log(23>=9);*/
 //------------------------------------------------
 //LOGICAL OPERATORS
 
-var age = 22;
+// var age = 22;
 
 // if(age>=18 && age<=21){
 //   console.log("u r eligible");
@@ -80,6 +80,8 @@ var age = 22;
 //   console.log("u r eligible");
 // }
 
-if(!(age<22)){
-  console.log("eligible");
-}
+// if(!(age<22)){
+//   console.log("eligible");
+// }
+
+
