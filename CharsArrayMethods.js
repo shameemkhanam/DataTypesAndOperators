@@ -55,7 +55,7 @@ const characters = [
 // let fnames = characters.map((item) => {
 //   itemA = item.name.split(" ");
 //   return itemA[0];
-  
+
 // });
 // console.log(fnames);
 //-------------------------------------------------------
@@ -85,16 +85,16 @@ const characters = [
 // console.log(charsInNames);
 
 // Get the total number of characters by eye color (hint. a map of eye color to count):
-// let charsByEyeColor = characters.reduce((acc, curitem) => {
-//   if(acc[curitem.eye_color]){
-//     acc[curitem.eye_color]++;
-//   }
-//   else{
-//     acc[curitem.eye_color] = 1;
-//   }
-//   return acc;
-// }, {});
-// console.log(charsByEyeColor);
+let charsByEyeColor = characters.reduce((acc, curitem) => {
+  if(acc[curitem.eye_color]){
+    acc[curitem.eye_color]++;
+  }
+  else{
+    acc[curitem.eye_color] = 1;
+  }
+  return acc;
+}, {});
+console.log(charsByEyeColor);
 //-------------------------------------------------------
 // FILTER-->
 
@@ -131,16 +131,52 @@ const characters = [
 // console.log(sortByMass);
 
 // Sort by height:
+// let sortByHeight = characters.sort((a,b) => {
+//   return Number(a.height) - Number(b.height);
+// });
+// console.log(sortByHeight);
 
-// Sort by gender
-// EVERY
-// Does every character have blue eyes?
-// Does every character have mass more than 40?
-// Is every character shorter than 200?
-// Is every character male?
-// SOME
-// Is there at least one male character?
-// Is there at least one character with blue eyes?
-// Is there at least one character taller than 200?
-// Is there at least one character that has mass less than 50?
+// Sort by gender:
+// let sortByGender = characters.sort((a,b) => {
+//   if(a.gender === "female") return -1;
+//   return 1;
+// });
+// console.log(sortByGender);
+//-------------------------------------------------------
 
+// EVERY-->
+
+// Does every character have blue eyes? :
+// let blueEyes = characters.every((item) => item.eye_color=="blue");
+// console.log(blueEyes);
+
+// Does every character have mass more than 40? :
+// let massForty = characters.every((item) => item.mass > 40);
+// console.log(massForty);
+
+// Is every character shorter than 200? : 
+// let shorterHeight = characters.every((item) => item.height < 200);
+// console.log(shorterHeight);
+
+// Is every character male? : 
+// let charMale = characters.every((item) => item.gender === "male");
+// console.log(charMale);
+//-------------------------------------------------------
+
+// SOME-->
+
+// Is there at least one male character? :
+// let someMale = characters.some((item) => item.gender === "male");
+// console.log(someMale);
+
+// Is there at least one character with blue eyes? :
+// let charBlueEyes = characters.some((item) => item.eye_color === "blue");
+// console.log(charBlueEyes);
+
+// Is there at least one character taller than 200? :
+// let taller = characters.some((item) => item.height > 200);
+// console.log(taller);
+
+// Is there at least one character that has mass less than 50? :
+let massFifty = characters.some((item) => item.mass < 50);
+console.log(massFifty);
