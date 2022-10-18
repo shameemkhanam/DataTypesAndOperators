@@ -1,0 +1,178 @@
+<script>
+  let students = [
+    {
+      id: 001,
+      f_name: "Alex",
+      l_name: "B",
+      gender: "M",
+      married: false,
+      age: 22,
+      paid: 250,
+      courses: ["JavaScript", "React"],
+    },
+    {
+      id: 002,
+      f_name: "Ibrahim",
+      l_name: "M",
+      gender: "M",
+      married: true,
+      age: 32,
+      paid: 150,
+      courses: ["JavaScript", "PWA"],
+    },
+    {
+      id: 003,
+      f_name: "Rubi",
+      l_name: "S",
+      gender: "F",
+      married: false,
+      age: 27,
+      paid: 350,
+      courses: ["Blogging", "React", "UX"],
+    },
+    {
+      id: 004,
+      f_name: "Zack",
+      l_name: "F",
+      gender: "M",
+      married: true,
+      age: 36,
+      paid: 250,
+      courses: ["Git", "React", "Branding"],
+    },
+  ];
+  // let result;
+  // console.log(students.length);
+
+  //Students who are female :
+  // result = students.filter((stu) => stu.gender === "F");
+  // console.log(result);
+
+  //Full names of all students :
+  // result = students.map((stu) => {
+  //   return {"Fullname" : stu.f_name+ " " + stu.l_name };
+  // });
+  // console.log(result);
+
+  //Total amount paid by students :
+  // result = students.reduce((acc,stu) => {
+  //   return acc + stu.paid;
+  // }, 0);
+  // console.log(result);
+
+  //if there are any students < 30 age :
+  // result = students.some((stu) => stu.age < 30);
+  // console.log(result);
+
+  //who is the student with age 30 :
+  // result = students.find((stu) => stu.age < 30);
+  // console.log(result);
+
+  //if all the students have subscribed to at least two courses:
+  // result = students.every((stu) => {
+  //   return stu.courses.length >=2;
+  // });
+  // console.log(result);
+
+  //at():
+  // let arr = ["a","b","c"];
+  // console.log(arr.at(-1));
+  // console.log(arr.at(-2));
+
+  //=============================================================================
+
+  let artists = [
+    "John White Abbott",
+    "Leonardo da Vinci",
+    "Charles Aubry",
+    "Anna Atkins",
+    "Barent Avercamp",
+  ];
+  let resultArtists;
+
+  // console.log(artists.sort()); // (asc)
+
+  //sort : (desc)
+  // resultArtists = artists.sort((a, b) => {
+  //   return a === b ? 0 : a < b ? 1 : -1;
+  // });
+  // console.log(resultArtists);
+
+  //=============================================================================
+  //   let resultNames;
+  // let names = ['Bob', 'bakshi', 'adam', 'Maya', 'carl'];
+  // resultNames = names.sort((a,b) => {
+  //   let left = a.toUpperCase();
+  //   let right = b.toUpperCase();
+  //   // return (left === right) ? 0 : (left < right) ? 1 : -1; //d
+  //   return (left === right) ? 0 : (left > right) ? 1 : -1; //a
+  // });
+  // console.log(resultNames);
+
+  //=============================================================================
+
+  // let ages = [2, 1000, 10, 3, 23, 12, 30, 21];
+  // let resAges;
+
+  // // resAges = ages.sort((a,b) => a-b); //a
+  // resAges = ages.sort((a,b) => b-a);
+
+  // console.log(resAges);
+  //=============================================================================
+
+  // Sorting non-ASCII characters
+
+  // let items = ['communiqué', 'zèbre', 'adieu', 'éclair'];
+
+  // items.sort();
+
+  // console.log(items);
+
+  // items.sort((a,b) => a.localeCompare(b));
+  // console.log(items);
+  //=============================================================================
+
+  let users = [
+    { name: "Joe", address: "Huston", dob: "February 9, 1991", income: 87654 },
+    { name: "Bob", address: "London", dob: "July 1, 1986", income: 47974 },
+    { name: "Carl", address: "Bangalore", dob: "December 25, 1982", income: 97351 },
+    { name: "Amanda", address: "Lagos", dob: "March 19, 2001", income: 57753 }
+  ];
+
+  // console.table(users);
+  // console.log(users);
+
+  // Sort by names - Ascending:
+  // let namesAsc = users.sort((a,b) => {
+  //   let a1 = a.name.toUpperCase();
+  //   let b1 = b.name.toUpperCase();
+  //   return (a1 === b1) ? 0 : (a1>b1) ? 1 : -1;
+  // });
+  // console.log(namesAsc);
+
+  // Sort by address - Descending:
+  // let addDesc = users.sort((a,b) => {
+  //   let a1 = a.address.toUpperCase();
+  //   let b1 = b.address.toUpperCase();
+  //   return (a1 === b1) ? 0 : (a1 < b1) ? 1 : -1;
+  // });
+  // console.log(addDesc);
+
+  // Sort by income - Ascending:
+  // let incomeAsc = users.sort((a,b) => a.income - b.income);
+  // console.log(incomeAsc);
+
+  // Sort by income - Descending:
+  // let incomeDesc = users.sort((a,b) => b.income - a.income);
+  // console.log(incomeDesc);
+
+   // Sort by dob - Ascending
+  //  console.log(new Date('March 19, 2001')); // Date object
+  // let dobAsc = users.sort((a,b) => new Date(a.dob) - new Date(b.dob));
+  // console.log(dobAsc);
+
+  // Sort by dob - Descending
+  let dobDesc = users.sort((a,b) => new Date(b.dob) - new Date(a.dob));
+  console.log(dobDesc);
+
+</script>

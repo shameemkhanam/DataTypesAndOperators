@@ -1,0 +1,49 @@
+<script>
+  const orders = [
+    { id: "1", status: "pending" },
+    { id: "2", status: "pending" },
+    { id: "3", status: "cancelled" },
+    { id: "4", status: "shipped" },
+  ];
+  let result;
+
+  //how many are pending , cancelled and shipped :
+  // result = orders.reduce((acc, order) => {
+  //   if(acc[order.status]){
+  //     acc[order.status]++;
+  //   }
+  //   else{
+  //     acc[order.status] = 1;
+  //   }
+  //   return acc;
+  // }, {});
+  // console.log(result);
+  //=========================================================================
+
+  //flatten an array:
+  const folders = [
+    "index.js",
+    ["flatten.js", "map.js"],
+    ["any.js", ["all.js", "count.js", "hi.js"]],
+  ];
+
+  // result = folders.flat(Infinity);
+  // console.log(result);
+
+  //or
+
+  // function flatten(arr) {
+  //   let flattenedArr = arr.reduce((acc, curitem) => {
+  //     if(Array.isArray(curitem)){
+  //       return acc.concat(flatten(curitem));
+  //     }
+  //     else{
+  //       // acc.push(curitem);
+  //       return [...acc,curitem];
+  //     }
+  //   }, []);
+  //   return flattenedArr;
+  // }
+  // result = flatten(folders);
+  // console.log(result);
+</script>

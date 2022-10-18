@@ -1,0 +1,130 @@
+<script>
+  // const companies = [
+  //   {name : "Google", category : "Product based", start : 1981, end : 2004},
+  //   {name : "Amazon", category : "Product based", start : 1992, end : 2008},
+  //   {name : "Paytm", category : "Product based", start : 1999, end : 2007},
+  //   {name : "Coforge", category : "Service based", start : 1989, end : 2010},
+  //   {name : "Mindtree", category : "Service based", start : 1989, end : 2010}
+  // ];
+
+  // const ages = [33,12,20,16,5,54,21,44,61,13,15,45,25,64,32];
+
+  // for(let i=0; i<companies.length; i++){
+  //   console.log(companies[i]);
+  // }
+
+  // companies.forEach((item, index) => (console.log(item, index)));
+
+  // console.log(ages.length);
+  // let r = ages.filter((age) => (age > 21));
+  // console.log(r);
+
+  // let r = companies.filter((company) => (company.category == "Service based"));
+  // console.log(r);
+
+  // let r = companies.map((com) => (`${com.name} : ${com.category}`));
+  // console.log(r);
+
+  //sort companies based on start :
+  // let r = companies.sort((com1,com2) => (com2.start - com1.start));
+  // console.log(r);
+
+  //sort age array :
+  // let r = ages.sort((age1, age2) => (age1 - age2));
+  // console.log(r);
+
+  //total of ages array :
+  // let r = ages.reduce((acc, curitem) => (acc + curitem), 0);
+  // console.log(r);
+
+  //=================================================================================
+  //reduce()-->
+
+  const people = [
+    { id: 1, name: "Leigh", age: 35 },
+    { id: 2, name: "Jenny", age: 30 },
+    { id: 3, name: "Heather", age: 28 },
+  ];
+  let result;
+
+  //count
+  // result = people.reduce((acc, person) => (acc + 1), 0);
+  // console.log(result);
+
+  //sum of ages:
+  // result = people.reduce((acc, person) => (acc + person.age),0);
+  // console.log(result);
+
+  //Array of names:
+  // result = people.map((person) => person.name);
+  // console.log(result);
+
+  //or using reduce:
+
+  // result = people.reduce((acc, person) => [...acc, person.name], []);
+  // console.log(result);
+
+  //convert to id : like dict : 
+  // result = people.reduce((acc, person) => {
+  //   return {...acc, [person.id] : person};
+  // }, {});
+  // console.log(result);
+  // console.log(result[3]);
+
+  //max age : 
+  // result = people.reduce((acc,person) => {
+  //   if(acc === null || person.age > acc) return person.age;
+  //   else return acc;
+  // }, null);
+  // console.log(result);
+
+  //min age :
+  // result = people.reduce((acc , person) => {
+  //   if(acc === null || person.age < acc) return person.age;
+  //   else return acc;
+  // }, null);
+  // console.log(result);
+
+  //find by name:
+  // result = people.find((person) => {
+  //   if(person.name === "Leigh") return person;
+  //   return null;
+  // });
+  // console.log(result);
+
+  //or
+
+  // result = people.reduce((acc, person) => {
+  //   if(acc !== null) return acc;
+  //   if(person.name === "Leigh") return person;
+  //   return null;
+  // },null);
+  // console.log(result);
+
+  //all over age 18:
+  // result = people.every((person) => person.age > 18);
+  // console.log(result);
+
+  //or
+
+  // result = people.reduce((acc,person) => {
+  //   if(!acc) return false;
+  //   return person.age > 18;
+  // }, true);
+  // console.log(result);
+
+  //any over age 18 : 
+  // result = people.some((person) => person.age > 18);
+  // console.log(result);
+
+  //or
+
+  // result = people.reduce((acc, person) => {
+  //   if(acc) return true;
+  //   return person.age > 18;
+  // }, false);
+  // console.log(result);
+
+  
+
+</script>
