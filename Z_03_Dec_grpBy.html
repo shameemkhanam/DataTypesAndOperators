@@ -1,0 +1,83 @@
+<script>
+  // group by using reduce
+  let students = [
+    {
+      name: "sana",
+      age: 23
+    },
+    {
+      name: "rita",
+      age: 24
+    },
+    {
+      name: "seema",
+      age: 23
+    },
+    {
+      name: "meeta",
+      age: 45
+    },
+    {
+      name: "rina",
+      age: 60
+    },
+    {
+      name: "piku",
+      age: 60
+    },
+  ];
+
+  // let groups = students.reduce((acc, curitem) => {
+  //   let groupkey = curitem.name;
+  //   if (!acc[groupkey]) {
+  //     acc[groupkey] = [];
+  //   }
+  //   acc[groupkey].push(curitem);
+  //   return acc;
+  // }, {});
+  // console.log(groups);
+
+  // const groupBy = (inputArr, key) => {
+  //   return inputArr.reduce((acc, curitem) => {
+  //     let groupkey = curitem[key];
+  //     if (!acc[groupkey]) {
+  //       acc[groupkey] = [];
+  //     }
+  //     acc[groupkey].push(curitem);
+  //     return acc;
+  //   }, {});
+  // };
+  // console.log(groupBy(students, "age"));
+
+  //==============================================================
+
+  // let posts = [
+  //     {
+  //       author: 'saransh',
+  //       title: 'Learning context API and the useContext React hook',
+  //     },
+  //     {
+  //       author: 'pranshu',
+  //       title: 'Machine Learning Misconceptions That Software Developers Have',
+  //     },
+  //     {
+  //       author: 'saransh',
+  //       title: 'Understanding the useReducer hook in React',
+  //     },
+  //   ];
+
+  //   const groupBy = (inputArr,key) => {
+  //     return inputArr.reduce((acc,curitem) => {
+  //       let groupkey = curitem[key];
+  //       if(!acc[groupkey]){
+  //         acc[groupkey]=[];
+  //       }
+  //       acc[groupkey].push(curitem);
+  //       return acc;
+  //     }, {});
+  //   };
+
+  //   console.log(groupBy(posts,"author"));
+
+  //====================================================
+</script>

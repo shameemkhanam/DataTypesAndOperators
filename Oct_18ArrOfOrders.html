@@ -8,16 +8,16 @@
   let result;
 
   //how many are pending , cancelled and shipped :
-  // result = orders.reduce((acc, order) => {
-  //   if(acc[order.status]){
-  //     acc[order.status]++;
-  //   }
-  //   else{
-  //     acc[order.status] = 1;
-  //   }
-  //   return acc;
-  // }, {});
-  // console.log(result);
+  result = orders.reduce((acc, order) => {
+    if(acc[order.status]){
+      acc[order.status]++;
+    }
+    else{
+      acc[order.status] = 1;
+    }
+    return acc;
+  }, {});
+  console.log(result);
   //=========================================================================
 
   //flatten an array:

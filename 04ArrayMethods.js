@@ -38,7 +38,7 @@ console.table(arr3); */
 //ARRAY METHODS
 //========================================
 
-var a = ["sallu","abbu","neetu","meetu","neetu"];
+var a = ["sallu", "abbu", "neetu", "meetu", "neetu"];
 // console.log(a.sort());
 //----------------------------------------------
 // var a = [20,43,12,34];
@@ -52,14 +52,14 @@ var a = ["sallu","abbu","neetu","meetu","neetu"];
 
 // a.pop();
 // a.push("zeetu");
-a.shift();
-a.unshift("newValue");
-console.log(a);
+// a.shift();
+// a.unshift("newValue");
+// console.log(a);
 //----------------------------------------------
 
-let ar1 = ["a","b","c"] ;
-let ar2 = ["d","e"];
-let ar3 = ["f","g"];
+let ar1 = ["a", "b", "c"];
+let ar2 = ["d", "e"];
+let ar3 = ["f", "g"];
 // // console.log(ar1.concat(ar2,ar3));
 
 // // console.log(ar1.join(" "));
@@ -107,15 +107,15 @@ let ar3 = ["f","g"];
 //   return age >= 18;
 // }
 
-// let a12 = [12,14,20,18];
-// let b1 = a12.find(check);
+// let a12 = [12, 14, 20, 12, 18];
+// let b12 = a12.find(check);
 // console.log(b1);
-// function check(age){
-//   return age >=12;
+// function check(age) {
+//   return age >= 12;
 // }
 
 
-// b1 = a12.findIndex(check);
+// let b1 = a12.findIndex(check);
 // console.log(b1);
 // function check(age){
 //   return age >=12;
@@ -127,14 +127,14 @@ let ar3 = ["f","g"];
 //   return age >=18;
 // }
 
-let arrr = ["hh","kk","ll","oo"];
+let arrr = ["hh", "kk", "ll", "oo"];
 
 // console.log(arrr.valueOf());
 
 // arrr.fill("h");
 // arrr.fill("h",1);
-arrr.fill("h",1,4);
-// console.log(arrr);
+arrr.fill("h", 1, 3);
+console.log(arrr);
 
 
 

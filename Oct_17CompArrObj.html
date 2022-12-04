@@ -64,7 +64,7 @@
   // result = people.reduce((acc, person) => [...acc, person.name], []);
   // console.log(result);
 
-  //convert to id : like dict : 
+  // convert to id : like dict : 
   // result = people.reduce((acc, person) => {
   //   return {...acc, [person.id] : person};
   // }, {});
@@ -86,11 +86,11 @@
   // console.log(result);
 
   //find by name:
-  // result = people.find((person) => {
-  //   if(person.name === "Leigh") return person;
-  //   return null;
-  // });
-  // console.log(result);
+  result = people.find((person) => {
+    if(person.name === "Leigh") return person;
+    return null;
+  });
+  console.log(result);
 
   //or
 

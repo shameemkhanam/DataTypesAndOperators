@@ -47,5 +47,5 @@ const outer = (b) => {
   return inner;
 };
 let store = outer(20);
-// console.dir(store);
+console.dir(store);
 store();

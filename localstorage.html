@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Local Storage</title>
 </head>
+
 <body>
   <script>
-    // localStorage.setItem("fruits","Mango");
+    sessionStorage.setItem("fruits", "Mango");
     // localStorage.setItem("todo","buy tea-powder");
     // localStorage.setItem("todo","buy cake");
     // localStorage.removeItem("fruits");
@@ -19,25 +21,26 @@
     //DATE : 11/09/2022
     //=============================================
 
-    const session = {
-      screens : [],
-      state : true
-    };
+    // const session = {
+    //   screens : [],
+    //   state : true
+    // };
 
-    session.screens.push({name:"screenA", width:200, height : 300});
-    session.screens.push({name:"screenB", width:210, height : 200});
-    session.screens.push({name:"screenC", width:400, height : 230});
-    session.screens.push({name:"screenD", width:300, height : 120});
-    session.screens.push({name:"screenE", width:100, height : 340});
+    // session.screens.push({name:"screenA", width:200, height : 300});
+    // session.screens.push({name:"screenB", width:210, height : 200});
+    // session.screens.push({name:"screenC", width:400, height : 230});
+    // session.screens.push({name:"screenD", width:300, height : 120});
+    // session.screens.push({name:"screenE", width:100, height : 340});
 
-    console.log(session);
+    // console.log(session);
 
-    const sessionStr = JSON.stringify(session);
-    localStorage.setItem("Session",sessionStr);
+    // const sessionStr = JSON.stringify(session);
+    // localStorage.setItem("Session",sessionStr);
 
-    let sessionStrFrmLS = localStorage.getItem("Session");
-    console.log(JSON.parse(sessionStrFrmLS));
+    // let sessionStrFrmLS = localStorage.getItem("Session");
+    // console.log(JSON.parse(sessionStrFrmLS));
 
   </script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-// var str = "Javascript is a Scripting Language";
+var str = "Javascript is a Scripting is Language";
 // console.log(str.length);
 
 // console.log(str.toLowerCase());
@@ -12,7 +12,7 @@
 
 // console.log(str.endsWith("age"));
 
-// console.log(str.search("is"));
+console.log(str.search("is"));
 
 // console.log(str.match(/r/g));
 
@@ -36,7 +36,7 @@
 var str3 = " world";
 console.log(str.concat(str2,str3));*/
 
-var str4 = "Hello World dfsdfsdfsd";
+// var str4 = "Hello World dfsdfsdfsd";
 // console.log(str4.split("e"));
 
 // console.log(str4.repeat(4));
@@ -57,7 +57,7 @@ var str4 = "Hello World dfsdfsdfsd";
 
 // console.log(b.valueOf());
 
-let str = "abc def";
-console.log(str.slice(0,str.length-1));
+// let str = "abc def";
+// console.log(str.slice(0,str.length-1));
 
 
